@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: max-content;
+  background: #eaeae4;
+  border-radius: 30px;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+
+div {
+  display: flex;
+  margin: 10px;
+}
+
+.elem {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px;
+}

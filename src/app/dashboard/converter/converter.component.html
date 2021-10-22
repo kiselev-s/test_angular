@@ -1,0 +1,52 @@
+<h1>{{title}}</h1>
+<div class="wrap">
+  <div class="container">
+
+    <div>
+      <div class="elem">
+        <mat-label>Отдать</mat-label>
+        <mat-form-field appearance="fill" color="accent">
+          <mat-label></mat-label>
+          <input matInput type="number" [(ngModel)]="valueInput">
+        </mat-form-field>
+      </div>
+
+      <div class="elem">
+        <mat-label>{{getNameMoney(moneyInput)}}</mat-label>
+        <mat-form-field appearance="fill">
+          <mat-label>Выбрать</mat-label>
+          <mat-select [(ngModel)]="moneyInput" name="item">
+            <mat-option *ngFor="let item of moneyData" [value]="item">
+              {{item.cc}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <button mat-raised-button color="primary" (click)="calculate(moneyInput, moneyResult)">=</button>
+
+    <div>
+      <div class="elem">
+        <mat-label>Получить</mat-label>
+        <mat-form-field appearance="fill" color="accent">
+          <mat-label></mat-label>
+          <input matInput readonly [(ngModel)]="valueResult">
+        </mat-form-field>
+      </div>
+
+      <div class="elem">
+        <mat-label>{{getNameMoney(moneyResult)}}</mat-label>
+        <mat-form-field appearance="fill">
+          <mat-label>Выбрать</mat-label>
+          <mat-select [(ngModel)]="moneyResult" name="item">
+            <mat-option *ngFor="let item of moneyData" [value]="item">
+              {{item.cc}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+  </div>
+</div>
